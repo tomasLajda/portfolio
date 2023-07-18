@@ -1,0 +1,22 @@
+.about h1 {
+  font-size: 6rem;
+  line-height: 1.2em;
+  text-transform: capitalize;
+}
+
+.about h1 span {
+  font-size: 5.56rem;
+}
+
+.about {
+  height: 520px;
+}
+
+.about img {
+  margin: 0 1.5rem;
+  width: 640px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: 1s ease-in;
+}

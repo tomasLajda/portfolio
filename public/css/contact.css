@@ -1,0 +1,101 @@
+.contact .container {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.formContainer {
+  margin-right: 1rem;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.5rem;
+}
+
+.contactForm div {
+  display: grid;
+  width: 100%;
+}
+
+.contactForm div * {
+  background-color: var(--container-bg-color);
+  color: var(--main-font-color);
+  border-radius: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  border: solid 0.25em hsl(0, 0%, 15%);
+  font-size: 1.2rem;
+  outline: none;
+  overflow: auto;
+}
+
+.contactForm div *:hover {
+  opacity: 0.8;
+}
+
+.contactForm div *:focus {
+  opacity: 1;
+  border: solid 0.25em hsl(0, 0%, 20%);
+}
+
+.contactForm input {
+  width: 12em;
+}
+
+.contactForm textarea {
+  width: 30em;
+}
+
+.contactForm .submit {
+  font-size: 1.5rem;
+  padding: 0.3em 0;
+  cursor: pointer;
+  width: 10em;
+  color: hsl(0, 0%, 50%);
+}
+
+.contactForm .submit:hover {
+  color: var(--main-font-color);
+}
+
+.socialMedia {
+  max-width: 480px;
+}
+
+.socialMedia h1 {
+  font-size: 5rem;
+}
+
+.socialMedia div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialMedia p {
+  margin-left: 1em;
+}
+
+.socialMedia img:hover {
+  animation: rotate-center 0.5s ease-in-out both;
+}
+
+.socialMedia a {
+  margin-bottom: 1rem;
+  background-color: var(--main-bg-color);
+  padding: 1rem;
+  border-radius: 1em;
+}
+
+.socialMedia img {
+  width: 50px;
+}

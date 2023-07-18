@@ -1,0 +1,147 @@
+@import "prefix.css";
+@import "var.css";
+@import "home.css";
+@import "me.css";
+@import "animation.css";
+@import "contact.css";
+
+.hide * {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  background: url(../img/43.png) var(--main-bg-color);
+}
+
+main {
+  max-width: 70%;
+  margin: auto;
+}
+
+h1,
+h2 {
+  font-family: "Nunito", sans-serif;
+  background-image: linear-gradient(
+    to left,
+    hsl(210, 76%, 74%),
+    hsl(260, 76%, 74%),
+    hsl(310, 76%, 74%),
+    hsl(10, 76%, 74%),
+    hsl(60, 82%, 74%)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 1.2em;
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+a {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+a {
+  font-weight: 700;
+}
+
+a,
+p {
+  color: var(--main-font-color);
+}
+
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  animation: 1s 1 slideInFromLeft;
+}
+
+.mainHeader div {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#logo {
+  cursor: default;
+  width: 60px;
+}
+
+#github {
+  width: 30px;
+}
+
+.mainHeader ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.mainHeader li {
+  margin: 0 1rem;
+}
+
+.mainHeader li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  border-radius: 0.25rem;
+  background: var(--border-underline-color);
+  transition: width 0.3s;
+}
+
+.mainHeader li:hover::after {
+  width: 100%;
+}
+
+#active::after {
+  width: 100%;
+}
+
+.mainHeader a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  margin: 15rem 0 3rem;
+  background-color: var(--container-bg-color);
+  border: 1.5rem solid var(--container-bg-color);
+  border-radius: 1.2rem;
+  animation: 1s 1 fade-bottom;
+}
+
+.container p {
+  max-width: 600px;
+}

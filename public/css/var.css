@@ -1,0 +1,6 @@
+:root {
+  --main-bg-color: hsl(0, 0%, 7%);
+  --container-bg-color: hsl(0, 0%, 10%);
+  --main-font-color: hsl(0, 0%, 90%);
+  --border-underline-color: hsl(210, 89%, 74%);
+}
