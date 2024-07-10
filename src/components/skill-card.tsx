@@ -12,10 +12,10 @@ const SkillCard = (props: SkillCardProps) => {
       <img
         src={props.image}
         alt=''
-        className='mb-5 rounded-full w-24 h-24 lg:w-36 lg:h-36'
+        className='mb-2 w-24 h-24 lg:w-36 lg:h-36'
       />
       <CardContent>
-        <CardTitle>{props.name}</CardTitle>
+        <CardTitle className='mb-2'>{props.name}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardContent>
     </Card>
