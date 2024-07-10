@@ -10,6 +10,7 @@ const Logo = () => {
       src={theme === 'dark' ? logoDark : logoLight}
       alt='logo'
       width='120px'
+      className='relative right-12'
     />
   );
 };

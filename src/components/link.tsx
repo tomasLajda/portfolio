@@ -12,17 +12,18 @@ interface LinkProps {
     | null
     | undefined;
   url: string;
+  target?: boolean;
   children?: JSX.Element;
 }
 
 const Link = (props: LinkProps) => {
   return (
     <li className='mr-2 '>
-      <a href={props.url}>
+      <a href={props.url} target={props.target ? '_blank' : ''}>
         <Button
           variant={props.variant || 'default'}
           size={props.children ? 'icon' : 'default'}
-          className='text-base font-semibold'
+          className='text-xl font-semibold'
         >
           {props.children ? props.children : props.text}
         </Button>

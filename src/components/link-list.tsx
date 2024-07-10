@@ -4,6 +4,7 @@ interface LinkProps {
   links: {
     url: string;
     text: string;
+    target?: boolean;
     img?: JSX.Element;
   }[];
   variant?:
@@ -31,6 +32,7 @@ const LinkList = (props: LinkProps) => {
             url={link.url}
             text={link.text}
             variant={props.variant || 'default'}
+            target={link.target}
           >
             {link.img}
           </Link>
