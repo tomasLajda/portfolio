@@ -1,31 +1,37 @@
 import { Button } from './ui/button';
 
-interface LinkProps {
-  text: string;
-  variant?:
-    | 'link'
-    | 'default'
-    | 'destructive'
-    | 'outline'
-    | 'secondary'
-    | 'ghost'
-    | null
-    | undefined;
+export type variant =
+  | 'link'
+  | 'default'
+  | 'destructive'
+  | 'outline'
+  | 'secondary'
+  | 'ghost'
+  | null
+  | undefined;
+
+export interface LinkInterface {
   url: string;
+  text: string;
   target?: boolean;
+  img?: JSX.Element;
+}
+
+interface LinkProps extends LinkInterface {
+  variant?: variant;
   children?: JSX.Element;
 }
 
-const Link = (props: LinkProps) => {
+const Link = ({ url, target, variant, children, text }: LinkProps) => {
   return (
     <li className='mr-2 '>
-      <a href={props.url} target={props.target ? '_blank' : ''}>
+      <a href={url} target={target ? '_blank' : ''}>
         <Button
-          variant={props.variant || 'default'}
-          size={props.children ? 'icon' : 'default'}
+          variant={variant || 'default'}
+          size={children ? 'icon' : 'default'}
           className='text-xl font-semibold'
         >
-          {props.children ? props.children : props.text}
+          {children || text}
         </Button>
       </a>
     </li>

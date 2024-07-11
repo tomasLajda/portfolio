@@ -1,4 +1,4 @@
-const links = [
+const sectionList = [
   {
     url: '/',
     text: 'Home',
@@ -17,4 +17,4 @@ const links = [
   },
 ];
 
-export default links;
+export default sectionList;

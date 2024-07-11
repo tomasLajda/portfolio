@@ -52,7 +52,7 @@ const skillsList = [
   },
   {
     name: 'AI',
-    description: 'I know how to properly use AI in my projects. I use copilot.',
+    description: 'I know how to properly use AI to be more productive.',
     image: ai,
   },
 ];

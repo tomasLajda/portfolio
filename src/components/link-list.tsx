@@ -1,39 +1,26 @@
-import Link from './link'; // Changed 'link' to 'Link' to match the component name
+import Link, { type LinkInterface, type variant } from './link';
 
-interface LinkProps {
-  links: {
-    url: string;
-    text: string;
-    target?: boolean;
-    img?: JSX.Element;
-  }[];
-  variant?:
-    | 'link'
-    | 'default'
-    | 'destructive'
-    | 'outline'
-    | 'secondary'
-    | 'ghost'
-    | null
-    | undefined;
+interface LinkListProps {
+  links: LinkInterface[];
+  variant?: variant;
   children?: JSX.Element;
 }
 
-const LinkList = (props: LinkProps) => {
+const LinkList = ({ links, variant, children }: LinkListProps) => {
   return (
     <ul className='flex'>
-      {props.links.map((link, i) => (
+      {links.map((link, i) => (
         <Link
           key={i}
           url={link.url}
           text={link.text}
-          variant={props.variant || 'default'}
           target={link.target}
+          variant={variant || 'default'}
         >
           {link.img}
         </Link>
       ))}
-      {props.children}
+      {children}
     </ul>
   );
 };
