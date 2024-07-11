@@ -5,13 +5,17 @@ interface WrapperProps {
   children?: React.ReactNode;
 }
 
-const Wrapper = (props: WrapperProps) => {
+const Wrapper = ({ bgColor, textColor, className, children }: WrapperProps) => {
   return (
     <div
-      className={`flex items-center flex-col ${props.bgColor} ${props.textColor}`}
+      className={`flex items-center flex-col ${bgColor ? bgColor : ''} ${
+        textColor ? textColor : ''
+      }`}
     >
-      <div className={`flex flex-col w-8/12 my-24 ${props?.className}`}>
-        {props.children}
+      <div
+        className={`flex flex-col w-8/12 my-24 ${className ? className : ''}`}
+      >
+        {children}
       </div>
     </div>
   );

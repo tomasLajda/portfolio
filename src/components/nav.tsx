@@ -6,13 +6,15 @@ import { ModeToggle } from './mode-toggle';
 
 const Nav = () => {
   return (
-    <nav className='flex flex-row items-center justify-between w-8/12 mx-auto'>
-      <Logo />
-      <LinkList links={sectionList} variant='ghost' />
-      <LinkList links={iconLinks} variant='ghost'>
-        <ModeToggle />
-      </LinkList>
-    </nav>
+    <div className='flex flex-col items-center mt-8'>
+      <nav className='flex flex-row items-center justify-between w-8/12'>
+        <Logo className='right-2' />
+        <LinkList links={sectionList} variant='ghost' />
+        <LinkList links={iconLinks} variant='ghost'>
+          <ModeToggle />
+        </LinkList>
+      </nav>
+    </div>
   );
 };
 
