@@ -11,8 +11,7 @@ import ts from '../assets/icons/ts.svg';
 const skillsList = [
   {
     name: 'TypeScript',
-    description:
-      'I am quite skilled in TypeScript and use it for all my js projects.',
+    description: 'I use TypeScript for all my js projects.',
     image: ts,
   },
   {

@@ -22,22 +22,17 @@ interface LinkProps {
 const LinkList = (props: LinkProps) => {
   return (
     <ul className='flex'>
-      {props.links.map(
-        (
-          link,
-          i // Added curly braces to wrap the map function
-        ) => (
-          <Link
-            key={i}
-            url={link.url}
-            text={link.text}
-            variant={props.variant || 'default'}
-            target={link.target}
-          >
-            {link.img}
-          </Link>
-        )
-      )}
+      {props.links.map((link, i) => (
+        <Link
+          key={i}
+          url={link.url}
+          text={link.text}
+          variant={props.variant || 'default'}
+          target={link.target}
+        >
+          {link.img}
+        </Link>
+      ))}
       {props.children}
     </ul>
   );
