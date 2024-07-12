@@ -4,11 +4,16 @@ interface LinkListProps {
   links: LinkInterface[];
   variant?: variant;
   children?: JSX.Element;
+  direction?: 'row' | 'column';
 }
 
-const LinkList = ({ links, variant, children }: LinkListProps) => {
+const LinkList = ({ links, variant, children, direction }: LinkListProps) => {
   return (
-    <ul className='flex'>
+    <ul
+      className={`flex ${
+        direction === 'column' ? 'flex-col items-center' : 'gap-2'
+      }`}
+    >
       {links.map((link, i) => (
         <Link
           key={i}

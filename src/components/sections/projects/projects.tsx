@@ -31,7 +31,7 @@ const Projects = () => {
   }, [api]);
 
   return (
-    <Wrapper className='w-min-48 max-w-screen-xl'>
+    <Wrapper className='w-min-48 w-9/12 max-w-screen-xl'>
       <h1 className='mb-8 text-center'>Projects</h1>
       <Carousel
         setApi={setApi}

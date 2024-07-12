@@ -75,5 +75,5 @@ h3 {
 }
 
 p {
-  @apply text-base lg:text-lg;
+  @apply text-sm sm:text-base lg:text-lg;
 }

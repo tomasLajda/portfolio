@@ -13,7 +13,9 @@ const Wrapper = ({ bgColor, textColor, className, children }: WrapperProps) => {
       }`}
     >
       <div
-        className={`flex flex-col w-8/12 my-24 ${className ? className : ''}`}
+        className={`flex flex-col w-10/12 sm:w-8/12 my-24 ${
+          className ? className : ''
+        }`}
       >
         {children}
       </div>

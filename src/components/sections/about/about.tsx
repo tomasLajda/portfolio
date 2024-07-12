@@ -5,7 +5,7 @@ import Skills from '../skills/skills';
 
 const About = () => {
   return (
-    <Wrapper bgColor='bg-[hsl(var(--primary))]' textColor='white'>
+    <Wrapper bgColor='bg-[hsl(var(--primary))]' textColor='white' className=''>
       <h1 className='mb-4'>About</h1>
       <div className='flex items-start'>
         <Terminal className='h-12 min-w-16 relative right-3' />

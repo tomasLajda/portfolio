@@ -9,13 +9,13 @@ const Footer = () => {
       <div className='border-t-4 border-secondary mb-2'></div>
       <div className='flex justify-between items-center'>
         <Logo className='left-1' />
-        <p className='text-center'>
+        <p className='text-center px-3 hidden sm:block'>
           Thanks for visiting! <br />
           If you have any questions, feel free to reach.
         </p>
         <LinkList links={iconLinks} variant='ghost' />
       </div>
-      <p className='text-center mt-8 text-secondary'>
+      <p className='mt-8 text-center text-secondary'>
         &copy; 2024 All rights reserved | CC0
       </p>
     </Wrapper>

@@ -24,7 +24,7 @@ interface LinkProps extends LinkInterface {
 
 const Link = ({ url, target, variant, children, text }: LinkProps) => {
   return (
-    <li className='mr-2 '>
+    <li className=''>
       <a href={url} target={target ? '_blank' : ''}>
         <Button
           variant={variant || 'default'}
