@@ -1,14 +1,15 @@
 import { Terminal } from 'lucide-react';
 import skillsList from '../utils/skills-list';
 import Skills from './skills';
+import Wrapper from './wrapper';
 
 const About = () => {
   return (
-    <>
-      <h1 className='text-5xl mb-4 font-semibold'>About</h1>
+    <Wrapper bgColor='bg-[hsl(var(--primary))]' textColor='white'>
+      <h1 className='mb-4'>About</h1>
       <div className='flex items-start'>
         <Terminal className='h-12 min-w-16 relative right-3' />
-        <p className='text-xl ml-1'>
+        <p className='ml-1'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore porro
           quos delectus, mollitia, aut esse nihil quibusdam illum explicabo quis
           voluptas suscipit in neque nesciunt doloribus, temporibus veniam
@@ -19,7 +20,7 @@ const About = () => {
         </p>
       </div>
       <Skills skills={skillsList} />
-    </>
+    </Wrapper>
   );
 };
 

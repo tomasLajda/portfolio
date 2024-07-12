@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ControllerRenderProps, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import {
   Form,
   FormControl,
@@ -10,16 +10,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+} from './ui/form';
+import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
+import Wrapper from './wrapper';
 
 const formSchema = z.object({
   firstName: z.string().min(3, {
-    message: 'Firstname must be at least 3 characters.',
+    message: 'First name must be at least 3 characters.',
   }),
   lastName: z.string().min(3, {
-    message: 'Lastname must be at least 3 characters.',
+    message: 'Last name must be at least 3 characters.',
   }),
   email: z.string().email({
     message: 'Invalid email address.',
@@ -48,7 +49,11 @@ const Contact = () => {
   }
 
   return (
-    <>
+    <Wrapper
+      bgColor='bg-[hsl(var(--primary))]'
+      textColor='white'
+      className='w-[40%] w-min-48 max-w-3xl'
+    >
       <h1 className='text-5xl font-bold pb-8'>Contact</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
@@ -109,7 +114,7 @@ const Contact = () => {
           </Button>
         </form>
       </Form>
-    </>
+    </Wrapper>
   );
 };
 

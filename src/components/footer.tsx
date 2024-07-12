@@ -9,7 +9,7 @@ const Footer = () => {
       <div className='border-t-4 border-secondary mb-2'></div>
       <div className='flex justify-between items-center'>
         <Logo className='left-1' />
-        <p>
+        <p className='text-center'>
           Thanks for visiting! <br />
           If you have any questions, feel free to reach.
         </p>

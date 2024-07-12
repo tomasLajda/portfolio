@@ -62,3 +62,18 @@ html,
 body {
   overflow-x: hidden;
 }
+
+h1 {
+  @apply text-5xl font-semibold;
+}
+
+h2 {
+  @apply text-4xl font-semibold;
+}
+h3 {
+  @apply text-3xl;
+}
+
+p {
+  @apply text-lg;
+}

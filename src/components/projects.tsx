@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from './ui/carousel';
+import Wrapper from './wrapper';
 
 const Projects = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -30,8 +31,8 @@ const Projects = () => {
   }, [api]);
 
   return (
-    <>
-      <h1 className='text-5xl font-bold mb-8 text-center'>Projects</h1>
+    <Wrapper className='w-min-48 max-w-screen-xl'>
+      <h1 className='mb-8 text-center'>Projects</h1>
       <Carousel
         setApi={setApi}
         plugins={[
@@ -52,7 +53,7 @@ const Projects = () => {
       <div className='mt-6 text-center text-xl text-muted-foreground'>
         Slide {current} of {count}
       </div>
-    </>
+    </Wrapper>
   );
 };
 
