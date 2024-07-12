@@ -1,7 +1,7 @@
-import iconLinks from '../utils/icon-link-list';
-import LinkList from './link-list';
-import Logo from './logo';
-import Wrapper from './wrapper';
+import iconLinks from '../../../utils/icon-link-list';
+import LinkList from '../../link-list';
+import Logo from '../../logo';
+import Wrapper from '../../wrapper';
 
 const Footer = () => {
   return (

@@ -1,16 +1,16 @@
 import Autoplay from 'embla-carousel-autoplay';
 import { useEffect, useState } from 'react';
 
-import projectList from '../utils/project-list';
-import ProjectCard from './project-card';
+import projectList from '../../../utils/project-list';
 import {
   Carousel,
   CarouselContent,
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from './ui/carousel';
-import Wrapper from './wrapper';
+} from '../../ui/carousel';
+import Wrapper from '../../wrapper';
+import ProjectCard from './project-card';
 
 const Projects = () => {
   const [api, setApi] = useState<CarouselApi>();

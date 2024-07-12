@@ -1,7 +1,7 @@
 import { Terminal } from 'lucide-react';
-import skillsList from '../utils/skills-list';
-import Skills from './skills';
-import Wrapper from './wrapper';
+import skillsList from '../../../utils/skills-list';
+import Wrapper from '../../wrapper';
+import Skills from '../skills/skills';
 
 const About = () => {
   return (

@@ -64,16 +64,16 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-semibold;
+  @apply text-4xl lg:text-5xl font-semibold;
 }
 
 h2 {
-  @apply text-4xl font-semibold;
+  @apply text-3xl lg:text-4xl font-semibold;
 }
 h3 {
-  @apply text-3xl;
+  @apply text-2xl lg:text-3xl;
 }
 
 p {
-  @apply text-lg;
+  @apply text-base lg:text-lg;
 }

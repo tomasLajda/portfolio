@@ -29,7 +29,7 @@ const Link = ({ url, target, variant, children, text }: LinkProps) => {
         <Button
           variant={variant || 'default'}
           size={children ? 'icon' : 'default'}
-          className='text-xl font-semibold'
+          className='text-lg lg:text-xl font-semibold'
         >
           {children || text}
         </Button>

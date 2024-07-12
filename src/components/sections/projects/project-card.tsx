@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from './ui/card';
-import { CarouselItem } from './ui/carousel';
+} from '../../ui/card';
+import { CarouselItem } from '../../ui/carousel';
 
 interface ProjectCardProps {
   img: string;

@@ -13,7 +13,7 @@ const Logo = ({ className }: LogoProps) => {
     <img
       src={theme === 'dark' ? logoDark : logoLight}
       alt='logo'
-      className={`relative w-12 md:w-16 ${className ? className : ''}`}
+      className={`relative w-12 lg:w-16 ${className ? className : ''}`}
     />
   );
 };

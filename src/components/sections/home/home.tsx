@@ -1,6 +1,6 @@
-import profileImage from '../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg';
-import { Button } from './ui/button';
-import Wrapper from './wrapper';
+import profileImage from '../../../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg';
+import { Button } from '../../ui/button';
+import Wrapper from '../../wrapper';
 
 const Home = () => {
   return (

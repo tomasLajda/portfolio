@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ControllerRenderProps, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { Button } from './ui/button';
+import { Button } from '../../ui/button';
 import {
   Form,
   FormControl,
@@ -10,10 +10,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from './ui/form';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import Wrapper from './wrapper';
+} from '../../ui/form';
+import { Input } from '../../ui/input';
+import { Textarea } from '../../ui/textarea';
+import Wrapper from '../../wrapper';
 
 const formSchema = z.object({
   firstName: z.string().min(3, {
