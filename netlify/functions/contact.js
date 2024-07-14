@@ -1,12 +1,9 @@
+import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 import nodemailer from 'nodemailer';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import serverless from 'serverless-http';
-import cors from 'cors';
-import dotenv from 'dotenv';
-
 
 dotenv.config();
 
@@ -24,11 +21,10 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.static('public'));
 app.use(express.json());
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename)
+const __directname = path.resolve();
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+  res.sendFile(path.join(__directname, 'public', 'contact.html'));
 });
 
 app.post('/contact', (req, res) => {
@@ -57,11 +53,15 @@ app.post('/contact', (req, res) => {
     text: message,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, (error) => {
     if (error) {
-      return res.status(500).json({ status: 'error', message: 'Failed to send email.' });
+      return res
+        .status(500)
+        .json({ status: 'error', message: 'Failed to send email.' });
     } else {
-      return res.status(200).json({ status: 'success', message: 'Form submitted successfully' });
+      return res
+        .status(200)
+        .json({ status: 'success', message: 'Form submitted successfully' });
     }
   });
 });
