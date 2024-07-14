@@ -23,7 +23,7 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (req: express.Request, res: express.Response) => {
+app.get('/', (res: express.Response) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
