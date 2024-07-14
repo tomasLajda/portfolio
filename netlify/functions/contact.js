@@ -1,14 +1,15 @@
-import express, { Express, Request, Response } from 'express';
-import * as nodemailer from 'nodemailer';
-import * as path from 'path';
+import express from 'express';
+import nodemailer from 'nodemailer';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import serverless from 'serverless-http';
-import * as cors from 'cors';
-import * as dotenv from 'dotenv';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app: Express = express();
-const port = process.env.PORT || 3001;
+const app = express();
 
 const corsOptions = {
   origin: 'https://tomaslajda.netlify.app', // Replace with your frontend's origin
@@ -22,11 +23,14 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (res: Response) => {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
-app.post('/contact', (req: Request, res: Response) => {
+app.post('/contact', (req, res) => {
   console.log(req.body);
 
   const { firstName, lastName, email, message } = req.body;
@@ -52,17 +56,13 @@ app.post('/contact', (req: Request, res: Response) => {
     text: message,
   };
 
-  transporter.sendMail(mailOptions, (error: any, info: any) => {
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return res
-        .status(500)
-        .json({ status: 'error', message: 'Failed to send email.' });
+      return res.status(500).json({ status: 'error', message: 'Failed to send email.' });
     } else {
-      return res
-        .status(200)
-        .json({ status: 'success', message: 'Form submitted successfully' });
+      return res.status(200).json({ status: 'success', message: 'Form submitted successfully' });
     }
   });
 });
 
-module.exports.handler = serverless(app);
+export default serverless(app);
