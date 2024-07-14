@@ -12,7 +12,7 @@ const app: Express = express();
 const port = process.env.PORT || 3001;
 
 const corsOptions = {
-  origin: 'https://master--tomaslajda.netlify.app', // Replace with your frontend's origin
+  origin: 'https://tomaslajda.netlify.app', // Replace with your frontend's origin
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 };
