@@ -24,7 +24,8 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.static('public'));
 app.use(express.json());
 
-const __dirname = path.resolve()
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename)
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
