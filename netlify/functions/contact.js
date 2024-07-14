@@ -1,9 +1,9 @@
 import express, { Express, Request, Response } from 'express';
-import nodemailer from 'nodemailer';
-import path from 'path';
+import * as nodemailer from 'nodemailer';
+import * as path from 'path';
 import serverless from 'serverless-http';
-import cors from 'cors';
-import dotenv from 'dotenv';
+import * as cors from 'cors';
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -22,7 +22,7 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (res: express.Response) => {
+app.get('/', (res: Response) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
@@ -48,23 +48,21 @@ app.post('/contact', (req: Request, res: Response) => {
   const mailOptions = {
     from: email,
     to: process.env.EMAIL_USER,
-    subject: `Message from ${firstName} ${lastName} ${email}`,
+    subject: `Contact form submission from ${firstName} ${lastName}`,
     text: message,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, (error: any, info: any) => {
     if (error) {
-      console.log('error');
-      res.status(500).json({ status: 'error' });
+      return res
+        .status(500)
+        .json({ status: 'error', message: 'Failed to send email.' });
     } else {
-      console.log('Email sent: ' + info.response);
-      res.json({ status: 'success' });
+      return res
+        .status(200)
+        .json({ status: 'success', message: 'Form submitted successfully' });
     }
   });
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
 });
 
 module.exports.handler = serverless(app);

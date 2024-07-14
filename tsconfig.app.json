@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "netlify/functions/contact.ts"]
+  "include": ["src", "netlify/functions/contact.js"]
 }
