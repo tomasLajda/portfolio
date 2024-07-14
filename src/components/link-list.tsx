@@ -1,13 +1,20 @@
 import Link, { type LinkInterface, type variant } from './link';
 
-interface LinkListProps {
+export interface LinkListProps {
   links: LinkInterface[];
   variant?: variant;
-  children?: JSX.Element;
   direction?: 'row' | 'column';
+  redirect: boolean;
+  children?: JSX.Element;
 }
 
-const LinkList = ({ links, variant, children, direction }: LinkListProps) => {
+const LinkList = ({
+  links,
+  variant,
+  children,
+  direction,
+  redirect,
+}: LinkListProps) => {
   return (
     <ul
       className={`flex ${
@@ -21,6 +28,7 @@ const LinkList = ({ links, variant, children, direction }: LinkListProps) => {
           text={link.text}
           target={link.target}
           variant={variant || 'default'}
+          redirect={redirect}
         >
           {link.img}
         </Link>

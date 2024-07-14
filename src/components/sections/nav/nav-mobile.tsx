@@ -6,10 +6,9 @@ import {
   NavigationMenuTrigger,
 } from '../../ui/navigation-menu';
 
-import sectionList from '../../../utils/section-list';
-import LinkList from '../../link-list';
+import LinkList, { LinkListProps } from '../../link-list';
 
-const NavMobile = () => {
+const NavMobile = ({ links, variant, redirect }: LinkListProps) => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -18,7 +17,12 @@ const NavMobile = () => {
             Sections
           </NavigationMenuTrigger>
           <NavigationMenuContent className='pb-2'>
-            <LinkList links={sectionList} variant='link' direction='column' />
+            <LinkList
+              links={links}
+              variant={variant}
+              direction='column'
+              redirect={redirect}
+            />
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>

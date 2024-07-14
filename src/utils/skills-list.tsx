@@ -1,7 +1,7 @@
 import ai from '../assets/icons/ai.svg';
 import c from '../assets/icons/c.svg';
 import cpp from '../assets/icons/cpp.svg';
-import db from '../assets/icons/db.svg';
+import git from '../assets/icons/git.svg';
 import linux from '../assets/icons/linux.svg';
 import node from '../assets/icons/node.svg';
 import react from '../assets/icons/react.svg';
@@ -9,16 +9,6 @@ import tailwind from '../assets/icons/tailwind.svg';
 import ts from '../assets/icons/ts.svg';
 
 const skillsList = [
-  {
-    name: 'TypeScript',
-    description: 'I use TypeScript for all my js projects.',
-    image: ts,
-  },
-  {
-    name: 'Node.js',
-    description: 'My choice for backend development with Express.js.',
-    image: node,
-  },
   {
     name: 'C',
     description: 'I explore low level programming with C.',
@@ -35,9 +25,14 @@ const skillsList = [
     image: react,
   },
   {
-    name: 'Linux',
-    description: 'My operating system of choice. I use Fedora.',
-    image: linux,
+    name: 'TypeScript',
+    description: 'I use TypeScript for all my js projects.',
+    image: ts,
+  },
+  {
+    name: 'Node.js',
+    description: 'My choice for backend development with Express.js.',
+    image: node,
   },
   {
     name: 'CSS',
@@ -46,9 +41,15 @@ const skillsList = [
     image: tailwind,
   },
   {
-    name: 'DB',
-    description: 'I worked with MongoDB, SQLite and Prisma for db.',
-    image: db,
+    name: 'Linux',
+    description:
+      'My operating system of choice. I rely on Fedora as my primary operating system.',
+    image: linux,
+  },
+  {
+    name: 'GIT',
+    description: 'I have experience using Git for version control.',
+    image: git,
   },
   {
     name: 'AI',

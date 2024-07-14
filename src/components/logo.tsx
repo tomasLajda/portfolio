@@ -1,6 +1,6 @@
 import logoDark from '../assets/icons/logo-dark.png';
 import logoLight from '../assets/icons/logo-light.png';
-import { useTheme } from './theme-provider';
+import { useTheme } from '../contexts/theme-provider';
 
 interface LogoProps {
   className?: string;

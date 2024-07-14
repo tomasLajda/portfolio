@@ -78,6 +78,7 @@ const Contact = () => {
       bgColor='bg-[hsl(var(--primary))]'
       textColor='white'
       className='w-[40%] w-min-48 max-w-3xl'
+      id='Contact'
     >
       <h1 className='text-5xl font-bold pb-8'>Contact</h1>
       <Form {...form}>

@@ -19,13 +19,35 @@ export interface LinkInterface {
 
 interface LinkProps extends LinkInterface {
   variant?: variant;
+  redirect: boolean;
   children?: JSX.Element;
 }
 
-const Link = ({ url, target, variant, children, text }: LinkProps) => {
+const Link = ({
+  url,
+  target,
+  variant,
+  children,
+  text,
+  redirect,
+}: LinkProps) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = e.currentTarget.getAttribute('href');
+
+    if (!target) return;
+    const targetElement = document.querySelector(target);
+    targetElement?.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState(null, '', ' ');
+  };
+
   return (
-    <li className=''>
-      <a href={url} target={target ? '_blank' : ''}>
+    <li>
+      <a
+        href={url}
+        target={target ? '_blank' : ''}
+        onClick={(e) => redirect || scrollToSection(e)}
+      >
         <Button
           variant={variant || 'default'}
           size={children ? 'icon' : 'default'}

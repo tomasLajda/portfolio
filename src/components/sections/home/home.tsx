@@ -4,7 +4,7 @@ import Wrapper from '../../wrapper';
 
 const Home = () => {
   return (
-    <Wrapper className='mt-12'>
+    <Wrapper className='mt-12' id='Home'>
       <div className='h-[70vh] relative flex items-center'>
         <div className='relative z-10'>
           <h1 className='mb-2'>
