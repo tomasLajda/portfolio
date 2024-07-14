@@ -4,6 +4,7 @@ import * as express from 'express';
 import { Express, Request, Response } from 'express';
 import * as nodemailer from 'nodemailer';
 import * as path from 'path';
+import * as serverless from 'serverless-http';
 
 dotenv.config();
 
@@ -60,3 +61,5 @@ app.post('/contact', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+module.exports.handler = serverless(app);

@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npx tsx src/index.tsx",
-    "dev": "vite",
+    "dev": "vite && npx tsx src/index.tsx",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -31,6 +30,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
     "react-responsive": "^10.0.0",
+    "serverless-http": "^3.2.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"

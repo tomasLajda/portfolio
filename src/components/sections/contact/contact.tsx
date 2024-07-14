@@ -148,7 +148,7 @@ const Contact = () => {
         <p
           className={`transition-opacity duration-500 ease-in-out ${
             status === 'error' ? 'opacity-100' : 'opacity-0'
-          } mt-2 text-destructive`}
+          } mt-2 text-red-500`}
         >
           Failed to send message. Please try again.
         </p>
