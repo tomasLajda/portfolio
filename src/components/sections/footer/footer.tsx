@@ -13,7 +13,7 @@ const Footer = () => {
           Thanks for visiting! <br />
           If you have any questions, feel free to reach.
         </p>
-        <LinkList links={iconLinks} variant='ghost' />
+        <LinkList links={iconLinks} variant='ghost' redirect={true} />
       </div>
       <p className='mt-8 text-center text-secondary'>
         &copy; 2024 All rights reserved | CC0
