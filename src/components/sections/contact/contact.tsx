@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ControllerRenderProps, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { useState } from 'react';
 import { Button } from '../../ui/button';
 import {
   Form,
@@ -31,6 +32,8 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,10 +44,31 @@ const Contact = () => {
     },
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      await response.json();
+      setStatus('success');
+      form.reset();
+
+      setTimeout(() => {
+        setStatus('idle');
+      }, 2000);
+    } catch (error) {
+      setStatus('error');
+    }
+  };
 
   return (
     <Wrapper
@@ -112,6 +136,23 @@ const Contact = () => {
           </Button>
         </form>
       </Form>
+
+      <div className='h-6'>
+        <p
+          className={`transition-opacity duration-500 ease-in-out ${
+            status === 'success' ? 'opacity-100' : 'opacity-0'
+          } mt-2 text-green-600`}
+        >
+          Message sent successfully!
+        </p>
+        <p
+          className={`transition-opacity duration-500 ease-in-out ${
+            status === 'error' ? 'opacity-100' : 'opacity-0'
+          } mt-2 text-destructive`}
+        >
+          Failed to send message. Please try again.
+        </p>
+      </div>
     </Wrapper>
   );
 };
