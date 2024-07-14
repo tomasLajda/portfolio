@@ -16,7 +16,7 @@ const LinkList = ({
   redirect,
 }: LinkListProps) => {
   return (
-    <ul
+    <div
       className={`flex ${
         direction === 'column' ? 'flex-col items-center' : 'gap-2'
       }`}
@@ -34,7 +34,7 @@ const LinkList = ({
         </Link>
       ))}
       {children}
-    </ul>
+    </div>
   );
 };
 

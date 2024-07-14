@@ -1,21 +1,29 @@
+import { useMediaQuery } from 'react-responsive';
 import profileImage from '../../../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg';
-import { Button } from '../../ui/button';
+import Link from '../../link';
 import Wrapper from '../../wrapper';
 
 const Home = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 550px)' });
+
   return (
     <Wrapper className='mt-12' id='Home'>
       <div className='h-[70vh] relative flex items-center'>
         <div className='relative z-10'>
           <h1 className='mb-2'>
-            Hi, I'm{' '}
+            Hi, I'm {isMobile && <br />}
             <span className='font-bold text-6xl text-[hsl(var(--primary))]'>
               Tomáš Lajda
             </span>
           </h1>
-          <h3>Software Engineer</h3>
+          <h3 className='mb-3'>Software Engineer</h3>
           <a href=''>
-            <Button className='text-2xl mt-4'>Contact Me</Button>
+            <Link
+              redirect={false}
+              text='Contact Me'
+              url='#Contact'
+              variant='default'
+            />
           </a>
         </div>
         <div

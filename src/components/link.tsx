@@ -42,21 +42,19 @@ const Link = ({
   };
 
   return (
-    <li>
-      <a
-        href={url}
-        target={target ? '_blank' : ''}
-        onClick={(e) => redirect || scrollToSection(e)}
+    <a
+      href={url}
+      target={target ? '_blank' : ''}
+      onClick={(e) => redirect || scrollToSection(e)}
+    >
+      <Button
+        variant={variant || 'default'}
+        size={children ? 'icon' : 'default'}
+        className='text-lg lg:text-xl font-semibold'
       >
-        <Button
-          variant={variant || 'default'}
-          size={children ? 'icon' : 'default'}
-          className='text-lg lg:text-xl font-semibold'
-        >
-          {children || text}
-        </Button>
-      </a>
-    </li>
+        {children || text}
+      </Button>
+    </a>
   );
 };
 
