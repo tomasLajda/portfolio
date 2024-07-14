@@ -1,10 +1,9 @@
-import * as cors from 'cors';
-import * as dotenv from 'dotenv';
-import * as express from 'express';
-import { Express, Request, Response } from 'express';
-import * as nodemailer from 'nodemailer';
-import * as path from 'path';
-import * as serverless from 'serverless-http';
+import express, { Express, Request, Response } from 'express';
+import nodemailer from 'nodemailer';
+import path from 'path';
+import serverless from 'serverless-http';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
