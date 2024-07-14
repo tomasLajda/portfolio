@@ -17,13 +17,13 @@ const corsOptions = {
   allowedHeaders: ['Content-Type'],
 };
 
-// Enable CORS for all routes
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Handle preflight requests
 
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (res: Response) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
