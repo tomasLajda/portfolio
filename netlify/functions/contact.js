@@ -7,6 +7,7 @@ import serverless from 'serverless-http';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+
 dotenv.config();
 
 const app = express();
@@ -24,7 +25,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.resolve()
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
