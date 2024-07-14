@@ -1,8 +1,8 @@
 import cors from 'cors';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import express, { Express, Request, Response } from 'express';
-import * as nodemailer from 'nodemailer';
-import * as path from 'path';
+import nodemailer from 'nodemailer';
+import path from 'path';
 
 dotenv.config();
 
