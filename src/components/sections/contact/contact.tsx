@@ -1,5 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ControllerRenderProps, useForm } from 'react-hook-form';
+import {
+  ControllerFieldState,
+  ControllerRenderProps,
+  useForm,
+  UseFormStateReturn,
+} from 'react-hook-form';
 import { z } from 'zod';
 
 import { useState } from 'react';
@@ -15,6 +20,13 @@ import {
 import { Input } from '../../ui/input';
 import { Textarea } from '../../ui/textarea';
 import Wrapper from '../../wrapper';
+
+interface FormValues {
+  message: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+}
 
 const formSchema = z.object({
   firstName: z.string().min(3, {
@@ -82,7 +94,15 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='firstName'
-            render={({ field }: { field: ControllerRenderProps }) => (
+            render={({
+              field,
+              fieldState,
+              formState,
+            }: {
+              field: ControllerRenderProps<FormValues, 'firstName'>;
+              fieldState: ControllerFieldState;
+              formState: UseFormStateReturn<FormValues>;
+            }) => (
               <FormItem>
                 <FormLabel>First Name</FormLabel>
                 <FormControl>
@@ -95,7 +115,15 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='lastName'
-            render={({ field }: { field: ControllerRenderProps }) => (
+            render={({
+              field,
+              fieldState,
+              formState,
+            }: {
+              field: ControllerRenderProps<FormValues, 'lastName'>;
+              fieldState: ControllerFieldState;
+              formState: UseFormStateReturn<FormValues>;
+            }) => (
               <FormItem>
                 <FormLabel>Last Name</FormLabel>
                 <FormControl>
@@ -108,7 +136,15 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='email'
-            render={({ field }: { field: ControllerRenderProps }) => (
+            render={({
+              field,
+              fieldState,
+              formState,
+            }: {
+              field: ControllerRenderProps<FormValues, 'email'>;
+              fieldState: ControllerFieldState;
+              formState: UseFormStateReturn<FormValues>;
+            }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
@@ -121,7 +157,15 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='message'
-            render={({ field }: { field: ControllerRenderProps }) => (
+            render={({
+              field,
+              fieldState,
+              formState,
+            }: {
+              field: ControllerRenderProps<FormValues, 'message'>;
+              fieldState: ControllerFieldState;
+              formState: UseFormStateReturn<FormValues>;
+            }) => (
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
@@ -141,7 +185,7 @@ const Contact = () => {
         <p
           className={`transition-opacity duration-500 ease-in-out ${
             status === 'success' ? 'opacity-100' : 'opacity-0'
-          } mt-2 text-green-600`}
+          } mt-2 text-green-500`}
         >
           Message sent successfully!
         </p>
