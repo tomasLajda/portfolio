@@ -1,10 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  ControllerFieldState,
-  ControllerRenderProps,
-  useForm,
-  UseFormStateReturn,
-} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { useState } from 'react';
@@ -20,13 +15,6 @@ import {
 import { Input } from '../../ui/input';
 import { Textarea } from '../../ui/textarea';
 import Wrapper from '../../wrapper';
-
-interface FormValues {
-  message: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-}
 
 const formSchema = z.object({
   firstName: z.string().min(3, {
@@ -94,15 +82,7 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='firstName'
-            render={({
-              field,
-              fieldState,
-              formState,
-            }: {
-              field: ControllerRenderProps<FormValues, 'firstName'>;
-              fieldState: ControllerFieldState;
-              formState: UseFormStateReturn<FormValues>;
-            }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>First Name</FormLabel>
                 <FormControl>
@@ -115,15 +95,7 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='lastName'
-            render={({
-              field,
-              fieldState,
-              formState,
-            }: {
-              field: ControllerRenderProps<FormValues, 'lastName'>;
-              fieldState: ControllerFieldState;
-              formState: UseFormStateReturn<FormValues>;
-            }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Last Name</FormLabel>
                 <FormControl>
@@ -136,15 +108,7 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='email'
-            render={({
-              field,
-              fieldState,
-              formState,
-            }: {
-              field: ControllerRenderProps<FormValues, 'email'>;
-              fieldState: ControllerFieldState;
-              formState: UseFormStateReturn<FormValues>;
-            }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
@@ -157,15 +121,7 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='message'
-            render={({
-              field,
-              fieldState,
-              formState,
-            }: {
-              field: ControllerRenderProps<FormValues, 'message'>;
-              fieldState: ControllerFieldState;
-              formState: UseFormStateReturn<FormValues>;
-            }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
