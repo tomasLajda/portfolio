@@ -1,5 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-import profileImage from '../../../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg';
+import profileImage from '../../../assets/portrait.png';
 import Link from '../../link';
 import Wrapper from '../../wrapper';
 
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <Wrapper className='mt-12' id='Home'>
       <div className='h-[70vh] relative flex items-center'>
-        <div className='relative z-10'>
+        <div className='relative z-10 -bottom-12'>
           <h1 className='mb-2'>
             Hi, I'm {isMobile && <br />}
             <span className='font-bold text-6xl text-[hsl(var(--primary))]'>

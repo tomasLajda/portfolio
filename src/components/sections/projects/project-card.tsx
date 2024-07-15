@@ -13,8 +13,8 @@ const ProjectCard = ({ img, title, description, url }: ProjectCardProps) => {
     <CarouselItem className='lg:basis-1/2'>
       <Card className='flex flex-col items-center p-5 bg-primary h-full'>
         <CardHeader>
-          <CardTitle className='underline underline-offset-3 mb-4 hover:opacity-80'>
-            <a href={url} target='_blank'>
+          <CardTitle className='underline underline-offset-3 mb-4 max-w-60 2xl:w-full hover:opacity-80'>
+            <a href={url} target='_blank' className=''>
               {title}
             </a>
           </CardTitle>
