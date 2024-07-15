@@ -1,7 +1,8 @@
 import * as dotenv from 'dotenv';
-import express, { Request, Response } from 'express';
+import { Request, Response } from 'express';
 import * as nodemailer from 'nodemailer';
-import serverless from 'serverless-http';
+import express = require('express');
+import serverless = require('serverless-http');
 
 dotenv.config();
 
