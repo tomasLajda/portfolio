@@ -50,7 +50,12 @@ const Contact = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const response = await fetch('/.netlify/functions/contact', {
+      const isLocal = window.location.hostname === 'localhost';
+      const apiUrl = isLocal
+        ? 'http://localhost:8888/.netlify/functions/contact'
+        : '/.netlify/functions/contact';
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -161,7 +166,7 @@ const Contact = () => {
         <p
           className={`transition-opacity duration-500 ease-in-out ${
             status === 'success' ? 'opacity-100' : 'opacity-0'
-          } mt-2 text-green-500`}
+          } mt-2`}
         >
           Message sent successfully!
         </p>

@@ -2,6 +2,6 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/*"
+  from = "/contact"
   to = "/.netlify/functions/contact"
   status = 200
