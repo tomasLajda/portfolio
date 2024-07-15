@@ -80,7 +80,9 @@ const Contact = () => {
       className='w-10/12 w-min-48 max-w-3xl sm:w-[60%]'
       id='Contact'
     >
-      <h1 className='text-5xl font-bold pb-8'>Contact</h1>
+      <h1 className='pb-8 text-5xl text-center sm:text-left font-bold'>
+        Contact
+      </h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
           <FormField
