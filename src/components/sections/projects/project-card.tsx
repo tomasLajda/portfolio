@@ -2,10 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
 import { CarouselItem } from '../../ui/carousel';
 
 interface ProjectCardProps {
-  img: string;
   title: string;
   description: string;
   url: string;
+  img: string;
 }
 
 const ProjectCard = ({ img, title, description, url }: ProjectCardProps) => {

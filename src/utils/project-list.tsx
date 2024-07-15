@@ -19,7 +19,7 @@ const projectList = [
   },
   {
     title: 'Web Development Skills',
-    utl: 'https://github.com/tomasLajda?tab=repositories',
+    url: 'https://github.com/tomasLajda?tab=repositories',
     description:
       "I have developed a range of web applications, from simple note-taking apps to more complex projects like blog and e-commerce platform. Throughout these projects, I have gained experience in designing and building user-friendly, functional interfaces and working with APIs to integrate various services. My skills also extend to basic backend development, where I've learned to create and manage server-side functionalities to support dynamic web applications. This diverse experience has equipped me with a solid foundation in both frontend and backend web development.",
     img: reactApp,
