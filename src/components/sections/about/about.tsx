@@ -24,6 +24,7 @@ const About = () => {
             problems and deliver solutions. You can explore my work on my{' '}
             <a
               href='https://github.com/tomasLajda'
+              target='_blank'
               className='underline hover:opacity-80'
             >
               GitHub page
