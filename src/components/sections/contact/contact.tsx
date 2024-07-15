@@ -26,6 +26,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: 'Invalid email address.',
   }),
+  subject: z.string().min(3, {
+    message: 'Subject must be at least 3 characters.',
+  }),
   message: z.string().min(10, {
     message: 'Message must be at least 10 characters.',
   }),
@@ -40,22 +43,20 @@ const Contact = () => {
       firstName: '',
       lastName: '',
       email: '',
+      subject: '',
       message: '',
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const response = await fetch(
-        'https://tomaslajda.netlify.app/.netlify/functions/contact',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(values),
-        }
-      );
+      const response = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -119,6 +120,19 @@ const Contact = () => {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input placeholder='john.smith@gmail.com' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='subject'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Subject</FormLabel>
+                <FormControl>
+                  <Input placeholder='Matter' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

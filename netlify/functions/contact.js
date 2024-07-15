@@ -30,9 +30,9 @@ app.get('/', (req, res) => {
 app.post('/contact', (req, res) => {
   console.log(req.body);
 
-  const { firstName, lastName, email, message } = req.body;
+  const { firstName, lastName, email, message, subject } = req.body;
 
-  if (!firstName || !lastName || !email || !message) {
+  if (!firstName || !lastName || !email || !message || !subject) {
     return res
       .status(400)
       .json({ status: 'error', message: 'All fields are required.' });
@@ -49,7 +49,7 @@ app.post('/contact', (req, res) => {
   const mailOptions = {
     from: email,
     to: process.env.EMAIL_USER,
-    subject: `Contact form submission from ${firstName} ${lastName}`,
+    subject: `Contact form submission from ${firstName} ${lastName}, subject: ${subject}`,
     text: message,
   };
 
