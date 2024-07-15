@@ -44,15 +44,13 @@ app.post('/.netlify/functions/contact', (req: Request, res: Response) => {
     text: message,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, (error: Error) => {
     if (error) {
       return res
         .status(500)
         .json({ status: 'error', message: error.toString() });
     }
-    res
-      .status(200)
-      .json({ status: 'success', message: 'Email sent: ' + info.response });
+    res.status(200).json({ status: 'success', message: 'Email sent' });
   });
 });
 
