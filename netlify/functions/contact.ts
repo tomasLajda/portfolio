@@ -44,7 +44,7 @@ app.post('/.netlify/functions/contact', (req: Request, res: Response) => {
     text: message,
   };
 
-  transporter.sendMail(mailOptions, (error: Error) => {
+  transporter.sendMail(mailOptions, (error) => {
     if (error) {
       return res
         .status(500)
