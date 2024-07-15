@@ -28,7 +28,7 @@ const ScrollUpButton = () => {
       onClick={scrollToTop}
       className={`${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-      } fixed z-10 left-[90%] bottom-6 hover:text-gray-500 cursor-pointer transition-all duration-300 ease-in-out`}
+      } fixed z-10 right-5 sm:left-[90%] bottom-6 hover:text-gray-500 cursor-pointer transition-all duration-300 ease-in-out`}
     />
   );
 };
