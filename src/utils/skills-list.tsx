@@ -1,4 +1,4 @@
-import ai from '../assets/icons/ai.svg';
+import python from '../assets/icons/python.svg';
 import c from '../assets/icons/c.svg';
 import cpp from '../assets/icons/cpp.svg';
 import git from '../assets/icons/git.svg';
@@ -52,9 +52,9 @@ const skillsList = [
     image: git,
   },
   {
-    name: 'AI',
-    description: 'I know how to properly use AI to be more productive.',
-    image: ai,
+    name: 'Python',
+    description: 'Basic Python skills for scripting.',
+    image: python,
   },
 ];
 
