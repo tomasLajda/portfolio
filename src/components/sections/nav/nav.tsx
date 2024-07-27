@@ -2,7 +2,6 @@ import { useMediaQuery } from 'react-responsive';
 import iconLinks from '../../../utils/icon-link-list';
 import LinkList from '../../link-list';
 import Logo from '../../logo';
-import { ModeToggle } from '../../mode-toggle';
 
 import NavMobile from './nav-mobile';
 
@@ -37,9 +36,7 @@ const Nav = () => {
         ) : (
           <LinkList links={sectionList} variant='ghost' redirect={false} />
         )}
-        <LinkList links={iconLinks} variant='ghost' redirect={true}>
-          <ModeToggle />
-        </LinkList>
+        <LinkList links={iconLinks} variant='ghost' redirect={true}></LinkList>
       </nav>
     </div>
   );
