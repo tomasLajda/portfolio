@@ -1,14 +1,22 @@
 import calculajda from '../assets/projects/calculajda.png';
 import gameEngine from '../assets/projects/game-engine.png';
 import reactApp from '../assets/projects/react-app.png';
+import tetris from '../assets/projects/tetris.png';
 
 const projectList = [
   {
     title: '2D Game Engine with SDL2',
     url: 'https://github.com/tomasLajda/arcade-games',
     description:
-      "I recently developed a 2D game engine from scratch using C++ and SDL2. Starting from the basics, I implemented essential graphical elements such as shapes, lines, points, and custom vector logic. The engine also includes game scene management and a basic rendering. As a demonstration, I built a classic breakout game, showcasing the engine's capabilities in handling rendering, controls, and gameplay mechanics. I am now planning to develop a Tetris game to further enhance the engine's functionality.",
+      "I recently developed a 2D game engine from scratch using C++ and SDL2. Starting from the basics, I implemented essential graphical elements such as shapes, lines, points, and custom vector logic. The engine also includes game scene management and a basic rendering. As a demonstration, I built a classic breakout game, showcasing the engine's capabilities in handling rendering, controls, and gameplay mechanics.",
     img: gameEngine,
+  },
+  {
+    title: 'Tetris made with my Game Engine',
+    url: 'https://github.com/tomasLajda/arcade-games',
+    description:
+      "As I mentioned earlier, I developed a 2D game engine with SDL2. Using this engine, I created a Tetris game as a fun project to test and enhance the engine's capabilities. The game features Tetris gameplay, including block rotation, movement, and line clearing. I also implemented a scoring system and level progression to add depth to the gameplay. This project was a great opportunity to apply and improve my development skills, as well as to learn more about game mechanics and design.",
+    img: tetris,
   },
   {
     title: 'Collaborative Calculator Application',

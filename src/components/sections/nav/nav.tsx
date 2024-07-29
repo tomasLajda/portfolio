@@ -36,7 +36,11 @@ const Nav = () => {
         ) : (
           <LinkList links={sectionList} variant='ghost' redirect={false} />
         )}
-        <LinkList links={iconLinks} variant='ghost' redirect={true}></LinkList>
+        <LinkList
+          links={iconLinks}
+          variant='default'
+          redirect={true}
+        ></LinkList>
       </nav>
     </div>
   );
