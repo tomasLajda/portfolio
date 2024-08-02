@@ -16,7 +16,7 @@ const Home = () => {
               Tomáš Lajda
             </span>
           </h1>
-          <h3 className='mb-3'>Software Engineer</h3>
+          <h3 className='mb-3'>Software Developer</h3>
           <a href=''>
             <Link
               redirect={false}
