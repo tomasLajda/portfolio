@@ -1,5 +1,6 @@
 import calculajda from '../assets/projects/calculajda.png';
 import gameEngine from '../assets/projects/game-engine.png';
+import iot from '../assets/projects/iot.png';
 import reactApp from '../assets/projects/react-app.png';
 import tetris from '../assets/projects/tetris.png';
 
@@ -17,6 +18,13 @@ const projectList = [
     description:
       "As I mentioned earlier, I developed a 2D game engine with SDL2. Using this engine, I created a Tetris game as a fun project to test and enhance the engine's capabilities. The game features Tetris gameplay, including block rotation, movement, and line clearing. I also implemented a scoring system and level progression to add depth to the gameplay. This project was a great opportunity to apply and improve my development skills, as well as to learn more about game mechanics and design.",
     img: tetris,
+  },
+  {
+    title: 'IoT',
+    url: 'https://github.com/tomasLajda/esp32-iot-gpio',
+    description:
+      "I am currently learning IoT and embedded systems. I love delving deep into concepts, and what better way to do it than starting from the basics? I am creating an IoT app that allows users to control and read values from GPIO pins through a browser. The app is built with the Arduino framework in C++ and uses Firebase. For the user interface, I use React with TypeScript. It's still a work in progress; the logic on the ESP32 is complete, but the user interface needs finishing. I plan to learn more about electronics and embedded systems, so stay tuned for more updates.",
+    img: iot,
   },
   {
     title: 'Collaborative Calculator Application',
