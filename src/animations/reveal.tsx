@@ -11,7 +11,7 @@ const Reveal = ({ children }: { children: JSX.Element }) => {
     if (inView) {
       animateControl.start('visible');
     }
-  }, [inView]);
+  }, [inView, animateControl]);
 
   return (
     <div ref={ref} className='relative overflow-hidden'>

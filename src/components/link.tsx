@@ -1,3 +1,4 @@
+import Rotate from '../animations/rotate';
 import { Button } from './ui/button';
 
 export type variant =
@@ -41,11 +42,11 @@ const Link = ({
     history.replaceState(null, '', ' ');
   };
 
-  return (
+  return !redirect ? (
     <a
       href={url}
       target={target ? '_blank' : ''}
-      onClick={(e) => redirect || scrollToSection(e)}
+      onClick={(e) => scrollToSection(e)}
     >
       <Button
         variant={variant || 'default'}
@@ -55,6 +56,18 @@ const Link = ({
         {children || text}
       </Button>
     </a>
+  ) : (
+    <Rotate>
+      <a href={url} target={target ? '_blank' : ''} onClick={() => redirect}>
+        <Button
+          variant={variant || 'default'}
+          size={children ? 'icon' : 'default'}
+          className='text-lg lg:text-xl font-semibold'
+        >
+          {children || text}
+        </Button>
+      </a>
+    </Rotate>
   );
 };
 
