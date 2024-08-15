@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! I'm excited to share more about my journey, skills, and the projects I've worked on.
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hello! I'm a 20-year-old software engineering student at Brno University of Technology, driven by a deep passion for technology and innovation. I am a fast learner who thrives on new challenges, always eager to expand my knowledge and skills in the ever-evolving field of IT.
 
-## Expanding the ESLint configuration
+## My Expertise
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+My expertise spans both low-level coding and web development, providing me with a well-rounded foundation in software engineering. I have successfully completed numerous projects that showcase my ability to solve complex problems and deliver effective solutions. You can explore these projects on my [GitHub page](https://github.com/).
 
-- Configure the top-level `parserOptions` property like this:
+## What I'm Looking For
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+As I embark on my career journey, I am seeking my first professional opportunity in the IT industry. I am eager to contribute my skills and enthusiasm to a dynamic team, tackle new challenges, and grow as a professional in this exciting field.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Explore My Work
+
+Feel free to explore my portfolio, where you'll find detailed information about the projects I've worked on, my skills, and my journey so far.
+
+Thank you for visiting my portfolio website. I'm looking forward to connecting and exploring opportunities in the world of technology!
+
+---
