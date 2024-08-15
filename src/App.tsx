@@ -1,3 +1,4 @@
+import Reveal from './animations/reveal';
 import ScrollUpButton from './components/scroll-up-button';
 import About from './components/sections/about/about';
 import Contact from './components/sections/contact/contact';
@@ -12,11 +13,19 @@ const App = () => {
     <div className='w-screen'>
       <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
         <Nav />
-        <Home />
+        <Reveal>
+          <Home />
+        </Reveal>
         <About />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
+        <Reveal>
+          <Footer />
+        </Reveal>
         <ScrollUpButton />
       </ThemeProvider>
     </div>
