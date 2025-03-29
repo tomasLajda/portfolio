@@ -5,7 +5,7 @@ import Wrapper from '../../wrapper';
 
 const Footer = () => {
   return (
-    <Wrapper className='mb-10'>
+    <Wrapper className='mb-10' minHeightScreen={false}>
       <div className='border-t-4 border-secondary mb-2'></div>
       <div className='flex justify-between items-center'>
         <Logo className='left-1' />
