@@ -4,7 +4,19 @@ import skillsList from '../../../utils/skills-list';
 import Wrapper from '../../wrapper';
 import Skills from '../skills/skills';
 
+function getYearsDifference(date1: Date, date2: Date): number {
+  const diffInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
+  const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
+  const diffInYears = diffInMilliseconds / millisecondsInYear;
+
+  return Math.floor(diffInYears);
+}
+
 const About = () => {
+  const birthDate = new Date('2003-11-22');
+  const currentDate = new Date();
+  const age = getYearsDifference(birthDate, currentDate);
+
   return (
     <Wrapper bgColor='bg-[hsl(var(--primary))]' textColor='white' id='About'>
       <Reveal>
@@ -14,7 +26,7 @@ const About = () => {
             <Terminal className='h-12 min-w-16 relative right-3' />
             <div>
               <p className='ml-1 mb-2 sm:mb-4'>
-                Hello! I'm a 20-year-old software engineering student at Brno
+                Hello! I'm a {age}-year-old software engineering student at Brno
                 University of Technology, passionate about technology and
                 innovation. As a fast learner, I thrive on new challenges and am
                 always eager to expand my knowledge and skills in the IT.
