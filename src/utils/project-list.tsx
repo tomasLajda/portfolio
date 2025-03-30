@@ -24,15 +24,8 @@ const projectList = [
     title: 'Low Level Dev',
     url: 'https://github.com/tomasLajda/esp32-iot-gpio',
     description:
-      "I am eager to learn more about IoT, robotics and embedded systems. I love delving deep into concepts, and what better way to do it than starting from the basics? I created some basic IoT app that allows users to control and read values from GPIO pins on ESP32 through a browser. The app is built with the Arduino framework in C++ and uses Firebase. For the user interface, I use React with TypeScript. It's still a learning process. recently I am working on Turtlebot with ROS framework, where I implemented PID control with basic mapping and localization.",
+      "I am eager to learn more about IoT, robotics and embedded systems. I love delving deep into concepts, and what better way to do it than starting from the basics? I created some basic IoT app that allows users to control and read values from GPIO pins on ESP32 through a browser. The app is built with the Arduino framework in C++ and uses Firebase. For the user interface, I use React with TypeScript. It's still a learning process. Most recently I worked on Turtlebot with ROS framework, where I implemented PID control with mapping and localization.",
     img: turtlebot,
-  },
-  {
-    title: 'Collaborative Calculator Application',
-    url: 'https://github.com/tomasLajda/ivs-projekt-2',
-    description:
-      'This collaborative project focused on developing a calculator application capable of performing basic arithmetic operations. Our main goals were to create a functional and reliable tool while following the best software engineering practices. This included using Git for version control, implementing testing methods, and maintaining high coding standards throughout the development process. I also served as the admin of the GitHub repository and quality assurance of code.',
-    img: calculajda,
   },
   {
     title: 'Web Development Skills',
@@ -40,6 +33,13 @@ const projectList = [
     description:
       "I have developed a range of web applications, from simple note-taking apps to more complex projects like blog and e-commerce platform. Throughout these projects, I have gained experience in designing and building user-friendly, functional interfaces and working with APIs to integrate various services. My skills also extend to basic backend development, where I've learned to create and manage server-side functionalities to support dynamic web applications. This diverse experience has equipped me with a solid foundation in both frontend and backend web development.",
     img: reactApp,
+  },
+  {
+    title: 'Collaborative Projects',
+    url: 'https://github.com/tomasLajda/ivs-projekt-2',
+    description:
+      'This collaborative project focused on developing a calculator application capable of performing basic arithmetic operations. We also developed together a compiler for Zig programming language in C. Our main goals were to create a functional and reliable tools while following the best software engineering practices. This included using Git for version control, implementing testing methods, and maintaining high coding standards throughout the development process. I also served as the admin of the GitHub repository and quality assurance of code.',
+    img: calculajda,
   },
 ];
 
