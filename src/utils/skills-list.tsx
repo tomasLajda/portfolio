@@ -11,12 +11,12 @@ import ts from '../assets/icons/ts.svg';
 const skillsList = [
   {
     name: 'C',
-    description: 'I explore low level programming with C.',
+    description: 'Simple, old and beautiful.',
     image: c,
   },
   {
     name: 'C++',
-    description: 'If I need to bring bigger guns.',
+    description: 'To blow my leg off.',
     image: cpp,
   },
   {
@@ -43,12 +43,12 @@ const skillsList = [
   {
     name: 'Linux',
     description:
-      'My operating system of choice. I rely on Fedora as my primary operating system.',
+      'I rely on Linux as my primary operating system for software development.',
     image: linux,
   },
   {
     name: 'GIT',
-    description: 'I have experience using Git for version control.',
+    description: 'You never know when you gonna need it.',
     image: git,
   },
   {
